@@ -1,0 +1,10 @@
+.navbar.navbar-expand-sm.navbar-light.navbar-lewagon
+  = link_to "/", class: "navbar-brand" do
+    = image_tag("https://www.devolute.org/assets/devolute-logo-7157fc5e0950464bbba6bc09a2876ea09199046bdba9aead3e6d07994b71962a.png" )
+  ul.list-inline.mar-bottom-0.flex.aic
+    li.list-inline-item
+      - if user_signed_in?
+        = link_to "Logout", destroy_user_session_path, method: :delete, class: "button button-pink"
+
+
+
