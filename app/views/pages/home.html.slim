@@ -1,1 +1,6 @@
-h1 Hello!
+.container.pad-lg
+  .card-user.pad-md
+    h3 Your pictures
+    .flex.jcsa
+      - current_user.photos.each do |photo|
+        = cl_image_tag photo.key, crop: :fill, class: "avatar-square"
