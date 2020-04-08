@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many_attached :photos
-  validates :photos, presence: true
+  validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
+  # validates :photos, presence: true
 end
